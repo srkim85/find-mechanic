@@ -1,0 +1,6 @@
+@import "./Header.module.scss";
+
+.main {
+  display: flex;
+  height: calc(100vh - $header-height - 4rem);
+}

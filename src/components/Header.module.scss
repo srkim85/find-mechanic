@@ -1,0 +1,25 @@
+$header-height: 25vh;
+
+.header {
+  // border: 2px solid salmon;
+  font-size: 2rem;
+  height: $header-height;
+  // padding-top: 10rem;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(../../1.jpg);
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: #fff;
+    text-align: center;
+  }
+}

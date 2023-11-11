@@ -1,0 +1,18 @@
+.btn {
+  display: inline-block;
+  border: 2px solid salmon;
+  background: none;
+  font-style: inherit;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.8rem 1.6rem;
+}
+
+.geolocation {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  z-index: 1000;
+  background-color: var(--color-primary-light-1);
+  color: #fff;
+}

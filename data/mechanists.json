@@ -1,0 +1,54 @@
+{
+  "mechanics": [
+    {
+      "mechanicName": "Marko Ristic",
+      "cityName": "Despotovac",
+      "country": "Serbia",
+      "position": {
+        "lat": 44.0947626,
+        "lng": 21.4197348
+      },
+      "id": 17806751
+    },
+    {
+      "mechanicName": "Jovan Petrovic",
+      "cityName": "Zrenjanin",
+      "country": "Serbia",
+      "position": {
+        "lat": 45.3605015,
+        "lng": 20.2936656
+      },
+      "id": 17806752
+    },
+    {
+      "mechanicName": "Nenad Stajic",
+      "cityName": "Vranje",
+      "country": "Serbia",
+      "position": {
+        "lat": 42.5568038,
+        "lng": 21.8192077
+      },
+      "id": 17806753
+    },
+    {
+      "mechanicName": "Marko Ristic",
+      "cityName": "Despotovac",
+      "country": "Serbia",
+      "position": {
+        "lat": 44.0947626,
+        "lng": -21.4197348
+      },
+      "id": 17806754
+    },
+    {
+      "mechanicName": "Petar Ninkovic",
+      "cityName": "Prijepolje",
+      "country": "Serbia",
+      "position": {
+        "lat": 43.3895354,
+        "lng": 19.5989864
+      },
+      "id": 17806755
+    }
+  ]
+}
