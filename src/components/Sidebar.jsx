@@ -1,21 +1,20 @@
 import styles from "./Sidebar.module.scss";
 import Message from "./Message";
 import UserPosition from "./UserPosition";
+import Distance from "./Distance";
+import { useMechanics } from "../contexts/MechanicsContext";
 
-function Sidebar({ mapPosition, geolocationPosition, setMapPosition }) {
+function Sidebar() {
+  const { mapPosition } = useMechanics();
+
   return (
-    <div className={styles.info}>
+    <div className={styles.sidebar}>
       {!mapPosition && (
         <Message message="Start by clicking on your location on the map 🙂" />
       )}
 
-      {mapPosition && (
-        <UserPosition
-          mapPosition={mapPosition}
-          geolocationPosition={geolocationPosition}
-          setMapPosition={setMapPosition}
-        />
-      )}
+      {mapPosition && <UserPosition />}
+      {mapPosition && <Distance />}
     </div>
   );
 }

@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import styles from "./UserPosition.module.scss";
+import { useMechanics } from "../contexts/MechanicsContext";
 
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 
-function UserPosition({ mapPosition, geolocationPosition, setMapPosition }) {
+function UserPosition() {
   const [city, setCity] = useState("");
+  const { mapPosition, geolocationPosition, setMapPosition } = useMechanics();
 
   const [lat, lng] = [...mapPosition];
   // console.log(lat, lng);

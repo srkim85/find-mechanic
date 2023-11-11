@@ -20,7 +20,3 @@ export function calculateDistance(lat1, lon1, lat2, lon2) {
 
   return distance;
 }
-
-// Example coordinates
-const distance = calculateDistance(40.7128, -74.006, 34.0522, -118.2437); // New York City to Los Angeles
-console.log("Distance:", distance, "km");

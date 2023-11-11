@@ -2,6 +2,7 @@
   "mechanics": [
     {
       "mechanicName": "Marko Ristic",
+      "phoneNumber": "064/326-1475",
       "cityName": "Despotovac",
       "country": "Serbia",
       "position": {
@@ -12,6 +13,7 @@
     },
     {
       "mechanicName": "Jovan Petrovic",
+      "phoneNumber": "064/324-1475",
       "cityName": "Zrenjanin",
       "country": "Serbia",
       "position": {
@@ -22,6 +24,7 @@
     },
     {
       "mechanicName": "Nenad Stajic",
+      "phoneNumber": "064/126-1475",
       "cityName": "Vranje",
       "country": "Serbia",
       "position": {
@@ -30,19 +33,11 @@
       },
       "id": 17806753
     },
-    {
-      "mechanicName": "Marko Ristic",
-      "cityName": "Despotovac",
-      "country": "Serbia",
-      "position": {
-        "lat": 44.0947626,
-        "lng": -21.4197348
-      },
-      "id": 17806754
-    },
+
     {
       "mechanicName": "Petar Ninkovic",
       "cityName": "Prijepolje",
+      "phoneNumber": "064/126-1476",
       "country": "Serbia",
       "position": {
         "lat": 43.3895354,

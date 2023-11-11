@@ -6,17 +6,12 @@ import {
   useMap,
   useMapEvents,
 } from "react-leaflet";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import styles from "./Map.module.scss";
 import Button from "./Button";
+import { useMechanics } from "../contexts/MechanicsContext";
 
-function Map({
-  mapPosition,
-  setMapPosition,
-  geolocationPosition,
-  getPosition,
-}) {
+function Map() {
+  const { mapPosition, geolocationPosition, getPosition } = useMechanics();
   const initialMapPosition = [44, 20];
 
   return (
@@ -42,7 +37,7 @@ function Map({
           </Marker>
         )}
         {mapPosition && <ChangeCenter position={mapPosition} />}
-        <DetectClick setMapPosition={setMapPosition} />
+        <DetectClick />
       </MapContainer>
     </div>
   );
@@ -55,7 +50,8 @@ function ChangeCenter({ position }) {
   return null;
 }
 
-function DetectClick({ setMapPosition }) {
+function DetectClick() {
+  const { setMapPosition } = useMechanics();
   // const navigate = useNavigate();
 
   useMapEvents({
