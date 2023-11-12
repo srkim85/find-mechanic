@@ -2,7 +2,8 @@ import { createContext, useState, useEffect, useContext } from "react";
 import { useGeoLocation } from "../hooks/useGeoLocation";
 import { calculateDistance } from "../helper/helper";
 
-const BASE_URL = `http://localhost:9000`;
+// const BASE_URL = `http://localhost:9000`;
+const BASE_URL = `https://find-mechanic-api-3n6i.onrender.com`;
 
 const MechanicsContext = createContext();
 
