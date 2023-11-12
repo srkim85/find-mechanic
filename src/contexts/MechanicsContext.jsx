@@ -2,8 +2,7 @@ import { createContext, useState, useEffect, useContext } from "react";
 import { useGeoLocation } from "../hooks/useGeoLocation";
 import { calculateDistance } from "../helper/helper";
 
-// const BASE_URL = `http://localhost:9000`;
-const BASE_URL = `https://find-mechanic.netlify.app/`;
+const BASE_URL = `http://localhost:9000`;
 
 const MechanicsContext = createContext();
 
@@ -24,8 +23,7 @@ function MechanicsProvider({ children }) {
     async function fetchMechanics() {
       try {
         setIsLoading(true);
-        // const res = await fetch(`${BASE_URL}/mechanics`);
-        const res = await fetch(`${BASE_URL}/api`);
+        const res = await fetch(`${BASE_URL}/mechanics`);
         const data = await res.json();
         setMechanics(data);
       } catch (err) {
