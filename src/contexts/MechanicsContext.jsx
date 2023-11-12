@@ -14,11 +14,7 @@ function MechanicsProvider({ children }) {
   const [isLoading, setIsLoading] = useState(false);
 
   const [mapPosition, setMapPosition] = useState(null);
-  const {
-    position: geolocationPosition,
-    isLoading: isLoadingGeolocation,
-    getPosition,
-  } = useGeoLocation();
+  const { position: geolocationPosition, getPosition } = useGeoLocation();
 
   useEffect(function () {
     async function fetchMechanics() {
