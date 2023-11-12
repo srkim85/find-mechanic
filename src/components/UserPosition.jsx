@@ -32,21 +32,9 @@ function UserPosition() {
     [lat, lng]
   );
 
-  useEffect(
-    function () {
-      if (geolocationPosition) {
-        setMapPosition([geolocationPosition.lat, geolocationPosition.lng]);
-      }
-    },
-    [geolocationPosition, setMapPosition]
-  );
-
   return (
-    <div className={styles.currentClickedPosition}>
-      Your current position is: <span>{city}</span>
-      {/* lat: {lat}
-      <br />
-      lng: {lng} */}
+    <div className={styles.userPosition}>
+      <span>Your current position:</span> {city}
     </div>
   );
 }

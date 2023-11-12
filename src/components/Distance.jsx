@@ -23,17 +23,18 @@ function Distance() {
   const minValue = Math.min(...distances);
   const index = distances.indexOf(minValue);
 
-  console.log(distances);
-  console.log(minValue);
-  console.log(index);
-
   return (
-    <div>
-      <p>Your nearest mechanic distance: {minValue.toFixed(2)} km </p>
-      <p>Your nearest mechanic location: {mechanics.at(index).cityName} </p>
+    <div className={styles.distance}>
       <p>
-        Mechanic info: {mechanics.at(index).mechanicName},{" "}
-        {mechanics.at(index).phoneNumber}
+        <span> Your nearest mechanic distance:</span> {Math.round(minValue)} km{" "}
+      </p>
+      <p>
+        <span> Your nearest mechanic location: </span>
+        {mechanics.at(index).cityName}{" "}
+      </p>
+      <p>
+        <span>Mechanic info: </span> {mechanics.at(index).mechanicName}
+        <span>,</span> {mechanics.at(index).phoneNumber}
       </p>
     </div>
   );

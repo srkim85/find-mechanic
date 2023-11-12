@@ -28,11 +28,20 @@ function MechanicsProvider({ children }) {
     fetchMechanics();
   }, []);
 
+  useEffect(
+    function () {
+      if (geolocationPosition) {
+        setMapPosition([geolocationPosition.lat, geolocationPosition.lng]);
+      }
+    },
+    [geolocationPosition, setMapPosition]
+  );
+
   return (
     <MechanicsContext.Provider
       value={{
-        mechanics,
         isLoading,
+        mechanics,
         mapPosition,
         setMapPosition,
         geolocationPosition,

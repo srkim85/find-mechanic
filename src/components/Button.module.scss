@@ -12,6 +12,7 @@
   position: absolute;
   bottom: 2rem;
   left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
   background-color: var(--color-primary-light-1);
   color: #fff;

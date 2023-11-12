@@ -9,12 +9,17 @@ function Sidebar() {
 
   return (
     <div className={styles.sidebar}>
-      {!mapPosition && (
-        <Message message="Start by clicking on your location on the map 🙂" />
-      )}
+      <div>
+        {!mapPosition && (
+          <Message
+            message="Start by clicking on your location on the map 🙂"
+            className={styles.message}
+          />
+        )}
 
-      {mapPosition && <UserPosition />}
-      {mapPosition && <Distance />}
+        {mapPosition && <UserPosition />}
+        {mapPosition && <Distance />}
+      </div>
     </div>
   );
 }

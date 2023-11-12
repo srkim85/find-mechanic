@@ -1,7 +1,9 @@
+@import "./Header.module.scss";
+@import "./Sidebar.module.scss";
+
 .mapContainer {
   /* border: 2px solid salmon; */
-  flex: 1;
-  height: 100%;
+  height: calc(100vh - $header-height - $sidebar-height - 4rem);
   background-color: var(--color-dark--2);
   position: relative;
   // padding: 1rem;
@@ -10,6 +12,7 @@
 }
 
 .map {
+  // height: calc(100vh - $header-height - $sidebar-height - 4rem);
   height: 100%;
 }
 

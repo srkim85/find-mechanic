@@ -1,16 +1,14 @@
-$header-height: 25vh;
+$header-height: 15vh;
 
 .header {
-  // border: 2px solid salmon;
   font-size: 2rem;
   height: $header-height;
-  // padding-top: 10rem;
   background-image: linear-gradient(
       to right bottom,
-      rgba(0, 0, 0, 0.01),
-      rgba(0, 0, 0, 0.01)
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
     ),
-    url(../../1.jpg);
+    url(../../hero.jpg);
   background-size: cover;
   background-position: center;
 
