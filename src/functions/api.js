@@ -1,11 +1,10 @@
 const jsonServer = require("json-server");
-const server = jsonServer.create();
+const express = require("express");
+const server = express();
 const router = jsonServer.router("../../data/mechanics.json");
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
-server.use(router);
+server.use("/api", router); // Assuming you want your API available at '/api'
 
-module.exports = (req, res) => {
-  server(req, res);
-};
+module.exports = server;
