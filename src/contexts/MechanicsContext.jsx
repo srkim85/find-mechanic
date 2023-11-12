@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect, useContext } from "react";
 import { useGeoLocation } from "../hooks/useGeoLocation";
+import { calculateDistance } from "../helper/helper";
 
 const BASE_URL = `http://localhost:9000`;
 
@@ -7,10 +8,16 @@ const MechanicsContext = createContext();
 
 function MechanicsProvider({ children }) {
   const [mechanics, setMechanics] = useState([]);
+  const [nearestMechanic, setNearestMechanic] = useState(null); // index
+  const [minDistance, setMinDistance] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
   const [mapPosition, setMapPosition] = useState(null);
-  const { position: geolocationPosition, getPosition } = useGeoLocation();
+  const {
+    position: geolocationPosition,
+    isLoading: isLoadingGeolocation,
+    getPosition,
+  } = useGeoLocation();
 
   useEffect(function () {
     async function fetchMechanics() {
@@ -37,6 +44,27 @@ function MechanicsProvider({ children }) {
     [geolocationPosition, setMapPosition]
   );
 
+  useEffect(
+    function () {
+      if (!mapPosition) return;
+
+      const distances = mechanics.map((mechanic) =>
+        calculateDistance(
+          mapPosition?.at(0),
+          mapPosition?.at(1),
+          mechanic.position.lat,
+          mechanic.position.lng
+        )
+      );
+      console.log(distances);
+      if (distances) {
+        setMinDistance(Math.min(...distances));
+        setNearestMechanic(distances.indexOf(minDistance));
+      }
+    },
+    [mapPosition, mechanics, minDistance]
+  );
+
   return (
     <MechanicsContext.Provider
       value={{
@@ -46,6 +74,8 @@ function MechanicsProvider({ children }) {
         setMapPosition,
         geolocationPosition,
         getPosition,
+        nearestMechanic,
+        minDistance,
       }}
     >
       {children}

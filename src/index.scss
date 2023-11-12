@@ -7,18 +7,21 @@
   --color-primary-light-1: #f17b3e;
   --color-primary-light-2: #e3997d;
   --color-primary-light-3: #d5b8bc;
-
-  // --color-text-light-1: #fdf2e9;
-  // --color-text-light-2: #fae5d3;
-
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
-  --color-grey-light-3: #f0eeee;
-  --color-grey-light-4: #ccc;
+  // --color-grey-light-3: #f0eeee;
+  // --color-grey-light-4: #ccc;
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #555;
-  --color-grey-dark-3: #999;
+  // --color-grey-dark-3: #999;
 }
+
+// $bp-largest: 75em; //1200px
+// $bp-large: 68.75em; //1100px
+$bp-medium: 56.25em; //900px
+$bp-medium2: 43.75em; //700px
+$bp-small: 37.5em; //600px
+$bp-smallest: 31.25em; //500px
 
 * {
   padding: 0;
@@ -29,6 +32,14 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: $bp-medium2) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -42,4 +53,5 @@ body {
   margin: 0 auto;
   height: 100vh;
   padding: 2rem;
+  border: 3px solid var(--color-primary-light-2);
 }

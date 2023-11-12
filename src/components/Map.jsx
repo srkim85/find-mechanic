@@ -11,7 +11,13 @@ import Button from "./Button";
 import { useMechanics } from "../contexts/MechanicsContext";
 
 function Map() {
-  const { mapPosition, geolocationPosition, getPosition } = useMechanics();
+  const {
+    mapPosition,
+    geolocationPosition,
+    getPosition,
+    nearestMechanic,
+    mechanics,
+  } = useMechanics();
   const initialMapPosition = [44, 20];
 
   return (
@@ -34,6 +40,16 @@ function Map() {
         {mapPosition && (
           <Marker position={mapPosition}>
             <Popup>Your position</Popup>
+          </Marker>
+        )}
+        {(nearestMechanic > 0 || nearestMechanic === 0) && (
+          <Marker
+            position={[
+              mechanics.at(nearestMechanic).position.lat,
+              mechanics.at(nearestMechanic).position.lng,
+            ]}
+          >
+            <Popup>Nearest Mechanic</Popup>
           </Marker>
         )}
         {mapPosition && <ChangeCenter position={mapPosition} />}

@@ -1,7 +1,7 @@
 {
   "mechanics": [
     {
-      "mechanicName": "Marko Ristic",
+      "mechanicName": "Marko Jovic",
       "phoneNumber": "064/326-1475",
       "cityName": "Despotovac",
       "country": "Serbia",
@@ -44,6 +44,28 @@
         "lng": 19.5989864
       },
       "id": 17806755
+    },
+    {
+      "mechanicName": "Sloba Perovic",
+      "cityName": "Pozarevac",
+      "phoneNumber": "064/126-1412",
+      "country": "Serbia",
+      "position": {
+        "lat": 44.6173335,
+        "lng": 21.1205285
+      },
+      "id": 17806734
+    },
+    {
+      "mechanicName": "Nikola Peric",
+      "cityName": "Krusevac",
+      "phoneNumber": "063/126-199",
+      "country": "Serbia",
+      "position": {
+        "lat": 43.5718161,
+        "lng": 21.3042656
+      },
+      "id": 17806732
     }
   ]
 }

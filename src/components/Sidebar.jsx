@@ -2,6 +2,7 @@ import styles from "./Sidebar.module.scss";
 import Message from "./Message";
 import UserPosition from "./UserPosition";
 import Distance from "./Distance";
+import Loader from "./Loader";
 import { useMechanics } from "../contexts/MechanicsContext";
 
 function Sidebar() {
